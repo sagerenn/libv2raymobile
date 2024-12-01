@@ -1,0 +1,33 @@
+name: CI
+
+on:
+  # push:
+  #   branches:
+  #     - main
+  # pull_request:
+  #   branches:
+  #     - main
+  workflow_dispatch
+
+
+jobs:
+  # Build for Android apilatest
+  android-apilatest:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout source code
+      uses: actions/checkout@v4
+      with:
+        submodules: 'recursive'
+
+    - name: Set up Go
+      uses: actions/setup-go@v5
+
+    - name: bash prepare.sh
+      run: bash prepare.sh
+
+    - name: Upload AAR
+      uses: actions/upload-artifact@v4
+      with:
+        name: android-apilatest
+        path: release
