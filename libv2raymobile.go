@@ -9,12 +9,12 @@ import (
 	"os"
 	"runtime"
 
-	// core "github.com/v2fly/v2ray-core/v5"
-	core "github.com/xtls/xray-core/core"
-	// serial "github.com/v2fly/v2ray-core/v5/infra/conf/serial"
-	serial "github.com/xtls/xray-core/infra/conf/serial"
-	// _ "github.com/v2fly/v2ray-core/v5/main/distro/all"
-	_ "github.com/xtls/xray-core/main/distro/all"
+	core "github.com/v2fly/v2ray-core/v5"
+	// core "github.com/xtls/xray-core/core"
+	serial "github.com/v2fly/v2ray-core/v5/infra/conf/serial"
+	// serial "github.com/xtls/xray-core/infra/conf/serial"
+	_ "github.com/v2fly/v2ray-core/v5/main/distro/all"
+	// _ "github.com/xtls/xray-core/main/distro/all"
 )
 
 type CoreManager struct {
